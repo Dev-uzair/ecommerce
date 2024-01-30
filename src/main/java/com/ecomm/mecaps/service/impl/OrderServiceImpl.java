@@ -52,7 +52,7 @@ try {
 		}
 		return new ResponseEntity<>( new Order() ,HttpStatus.OK);
 	}
-
+	@Transactional
 	@Override
 	public ResponseEntity<String> deleteById(long id) {
 	try {
