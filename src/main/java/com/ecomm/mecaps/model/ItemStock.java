@@ -1,7 +1,6 @@
 package com.ecomm.mecaps.model;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -28,9 +27,9 @@ public class ItemStock implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="stock_id")
-	private long stockId;
+	private Long stockId;
 
-	private BigInteger stock;
+	private Long stock;
 
 	//bi-directional many-to-one association to DarkStore
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -53,11 +52,11 @@ public class ItemStock implements Serializable {
 		this.stockId = stockId;
 	}
 
-	public BigInteger getStock() {
+	public Long getStock() {
 		return this.stock;
 	}
 
-	public void setStock(BigInteger stock) {
+	public void setStock(Long stock) {
 		this.stock = stock;
 	}
 

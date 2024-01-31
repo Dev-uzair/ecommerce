@@ -1,7 +1,6 @@
 package com.ecomm.mecaps.model;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -26,17 +25,17 @@ public class Category implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="category_id")
-	private long categoryId;
+	private Long categoryId;
 
-	private BigInteger image;
+	private Long image;
 
 	@Column(name="parent_id")
-	private BigInteger parentId;
+	private Long parentId;
 
 	@Column(name="reward_points")
-	private BigInteger rewardPoints;
+	private Long rewardPoints;
 
-	private BigInteger title;
+	private Long title;
 
 	//bi-directional many-to-one association to CategoryDiscount
 	@OneToMany(mappedBy="category")
@@ -61,35 +60,35 @@ public class Category implements Serializable {
 		this.categoryId = categoryId;
 	}
 
-	public BigInteger getImage() {
+	public Long getImage() {
 		return this.image;
 	}
 
-	public void setImage(BigInteger image) {
+	public void setImage(Long image) {
 		this.image = image;
 	}
 
-	public BigInteger getParentId() {
+	public Long getParentId() {
 		return this.parentId;
 	}
 
-	public void setParentId(BigInteger parentId) {
+	public void setParentId(Long parentId) {
 		this.parentId = parentId;
 	}
 
-	public BigInteger getRewardPoints() {
+	public Long getRewardPoints() {
 		return this.rewardPoints;
 	}
 
-	public void setRewardPoints(BigInteger rewardPoints) {
+	public void setRewardPoints(Long rewardPoints) {
 		this.rewardPoints = rewardPoints;
 	}
 
-	public BigInteger getTitle() {
+	public Long getTitle() {
 		return this.title;
 	}
 
-	public void setTitle(BigInteger title) {
+	public void setTitle(Long title) {
 		this.title = title;
 	}
 

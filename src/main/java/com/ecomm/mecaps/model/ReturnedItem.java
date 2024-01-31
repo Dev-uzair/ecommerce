@@ -1,7 +1,6 @@
 package com.ecomm.mecaps.model;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -26,9 +25,9 @@ public class ReturnedItem implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private Integer id;
 
-	private BigInteger quantity;
+	private Long quantity;
 
 	//bi-directional many-to-one association to OrderDetail
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -46,11 +45,11 @@ public class ReturnedItem implements Serializable {
 		this.id = id;
 	}
 
-	public BigInteger getQuantity() {
+	public Long getQuantity() {
 		return this.quantity;
 	}
 
-	public void setQuantity(BigInteger quantity) {
+	public void setQuantity(Long quantity) {
 		this.quantity = quantity;
 	}
 

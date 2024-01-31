@@ -2,7 +2,6 @@
 package com.ecomm.mecaps.model;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -27,9 +26,9 @@ public class Payment implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="payment_id")
-	private long paymentId;
+	private Long paymentId;
 
-	private BigInteger amount;
+	private Long amount;
 
 	private byte status;
 
@@ -54,11 +53,11 @@ public class Payment implements Serializable {
 		this.paymentId = paymentId;
 	}
 
-	public BigInteger getAmount() {
+	public Long getAmount() {
 		return this.amount;
 	}
 
-	public void setAmount(BigInteger amount) {
+	public void setAmount(Long amount) {
 		this.amount = amount;
 	}
 

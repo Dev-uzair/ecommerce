@@ -1,7 +1,6 @@
 package com.ecomm.mecaps.model;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -27,28 +26,28 @@ public class CategoryDiscount implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 
 	@Column(name="discount_code")
-	private BigInteger discountCode;
+	private Long discountCode;
 
 	@Column(name="discount_name")
-	private BigInteger discountName;
+	private Long discountName;
 
 	@Column(name="discount_unit")
-	private BigInteger discountUnit;
+	private Long discountUnit;
 
 	@Column(name="discount_value")
-	private BigInteger discountValue;
+	private Long discountValue;
 
 	@Column(name="maximum_discount_amount")
-	private BigInteger maximumDiscountAmount;
+	private Long maximumDiscountAmount;
 
 	@Column(name="valid_from")
-	private BigInteger validFrom;
+	private Long validFrom;
 
 	@Column(name="valid_till")
-	private BigInteger validTill;
+	private Long validTill;
 
 	//bi-directional many-to-one association to Category
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -66,59 +65,59 @@ public class CategoryDiscount implements Serializable {
 		this.id = id;
 	}
 
-	public BigInteger getDiscountCode() {
+	public Long getDiscountCode() {
 		return this.discountCode;
 	}
 
-	public void setDiscountCode(BigInteger discountCode) {
+	public void setDiscountCode(Long discountCode) {
 		this.discountCode = discountCode;
 	}
 
-	public BigInteger getDiscountName() {
+	public Long getDiscountName() {
 		return this.discountName;
 	}
 
-	public void setDiscountName(BigInteger discountName) {
+	public void setDiscountName(Long discountName) {
 		this.discountName = discountName;
 	}
 
-	public BigInteger getDiscountUnit() {
+	public Long getDiscountUnit() {
 		return this.discountUnit;
 	}
 
-	public void setDiscountUnit(BigInteger discountUnit) {
+	public void setDiscountUnit(Long discountUnit) {
 		this.discountUnit = discountUnit;
 	}
 
-	public BigInteger getDiscountValue() {
+	public Long getDiscountValue() {
 		return this.discountValue;
 	}
 
-	public void setDiscountValue(BigInteger discountValue) {
+	public void setDiscountValue(Long discountValue) {
 		this.discountValue = discountValue;
 	}
 
-	public BigInteger getMaximumDiscountAmount() {
+	public Long getMaximumDiscountAmount() {
 		return this.maximumDiscountAmount;
 	}
 
-	public void setMaximumDiscountAmount(BigInteger maximumDiscountAmount) {
+	public void setMaximumDiscountAmount(Long maximumDiscountAmount) {
 		this.maximumDiscountAmount = maximumDiscountAmount;
 	}
 
-	public BigInteger getValidFrom() {
+	public Long getValidFrom() {
 		return this.validFrom;
 	}
 
-	public void setValidFrom(BigInteger validFrom) {
+	public void setValidFrom(Long validFrom) {
 		this.validFrom = validFrom;
 	}
 
-	public BigInteger getValidTill() {
+	public Long getValidTill() {
 		return this.validTill;
 	}
 
-	public void setValidTill(BigInteger validTill) {
+	public void setValidTill(Long validTill) {
 		this.validTill = validTill;
 	}
 

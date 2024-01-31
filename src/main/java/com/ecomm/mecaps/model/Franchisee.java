@@ -25,7 +25,7 @@ public class Franchisee implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="franchisee_id")
-	private long franchiseeId;
+	private Long franchiseeId;
 
 	private String email;
 

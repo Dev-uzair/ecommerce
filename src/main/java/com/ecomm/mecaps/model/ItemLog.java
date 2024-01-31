@@ -1,7 +1,6 @@
 package com.ecomm.mecaps.model;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 import java.util.Date;
 
 import jakarta.persistence.Entity;
@@ -29,16 +28,16 @@ public class ItemLog implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int logID;
+	private Integer logID;
 
 	private String action;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date modiefied_Timestamp;
 
-	private BigInteger newPrice;
+	private Long newPrice;
 
-	private BigInteger oldPrice;
+	private Long oldPrice;
 
 	//bi-directional many-to-one association to ProductItem
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -72,19 +71,19 @@ public class ItemLog implements Serializable {
 		this.modiefied_Timestamp = modiefied_Timestamp;
 	}
 
-	public BigInteger getNewPrice() {
+	public Long getNewPrice() {
 		return this.newPrice;
 	}
 
-	public void setNewPrice(BigInteger newPrice) {
+	public void setNewPrice(Long newPrice) {
 		this.newPrice = newPrice;
 	}
 
-	public BigInteger getOldPrice() {
+	public Long getOldPrice() {
 		return this.oldPrice;
 	}
 
-	public void setOldPrice(BigInteger oldPrice) {
+	public void setOldPrice(Long oldPrice) {
 		this.oldPrice = oldPrice;
 	}
 

@@ -28,7 +28,7 @@ public class FranchiseeLog implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int logID;
+	private Integer logID;
 
 	private String action;
 
@@ -47,11 +47,11 @@ public class FranchiseeLog implements Serializable {
 	public FranchiseeLog() {
 	}
 
-	public int getLogID() {
+	public Integer getLogID() {
 		return this.logID;
 	}
 
-	public void setLogID(int logID) {
+	public void setLogID(Integer logID) {
 		this.logID = logID;
 	}
 

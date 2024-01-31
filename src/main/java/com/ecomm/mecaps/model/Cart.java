@@ -27,7 +27,7 @@ public class Cart implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="cart_id")
-	private long cartId;
+	private Long cartId;
 
 	//bi-directional many-to-one association to Customer
 	@ManyToOne(fetch=FetchType.LAZY)

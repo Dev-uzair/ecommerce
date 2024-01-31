@@ -28,7 +28,7 @@ public class VendorLog implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int logID;
+	private Integer logID;
 
 	private String action;
 

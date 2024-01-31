@@ -1,7 +1,6 @@
 package com.ecomm.mecaps.model;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -25,13 +24,13 @@ public class Shipping implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="shipping_id")
-	private long shippingId;
+	private Long shippingId;
 
 	@Column(name="estimated_delivery")
-	private BigInteger estimatedDelivery;
+	private Long estimatedDelivery;
 
 	@Column(name="shipping_cost")
-	private BigInteger shippingCost;
+	private Long shippingCost;
 
 	@Column(name="shipping_method")
 	private String shippingMethod;
@@ -55,19 +54,19 @@ public class Shipping implements Serializable {
 		this.shippingId = shippingId;
 	}
 
-	public BigInteger getEstimatedDelivery() {
+	public Long getEstimatedDelivery() {
 		return this.estimatedDelivery;
 	}
 
-	public void setEstimatedDelivery(BigInteger estimatedDelivery) {
+	public void setEstimatedDelivery(Long estimatedDelivery) {
 		this.estimatedDelivery = estimatedDelivery;
 	}
 
-	public BigInteger getShippingCost() {
+	public Long getShippingCost() {
 		return this.shippingCost;
 	}
 
-	public void setShippingCost(BigInteger shippingCost) {
+	public void setShippingCost(Long shippingCost) {
 		this.shippingCost = shippingCost;
 	}
 

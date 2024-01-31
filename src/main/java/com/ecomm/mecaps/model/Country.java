@@ -1,7 +1,6 @@
 package com.ecomm.mecaps.model;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -17,12 +16,13 @@ import jakarta.persistence.NamedQuery;
 @NamedQuery(name="Country.findAll", query="SELECT c FROM Country c")
 public class Country implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
 	@Id						// add id annotation cause project not working
+	@Column(name="country_id")
+	private Long countryId;
+
 	@Column(name="country_code")
 	private String countryCode;
-
-	@Column(name="country_id")
-	private BigInteger countryId;
 
 	@Column(name="country_name")
 	private String countryName;
@@ -44,11 +44,11 @@ public class Country implements Serializable {
 		this.countryCode = countryCode;
 	}
 
-	public BigInteger getCountryId() {
+	public Long getCountryId() {
 		return this.countryId;
 	}
 
-	public void setCountryId(BigInteger countryId) {
+	public void setCountryId(Long countryId) {
 		this.countryId = countryId;
 	}
 

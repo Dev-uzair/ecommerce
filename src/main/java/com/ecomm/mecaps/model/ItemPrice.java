@@ -1,7 +1,6 @@
 package com.ecomm.mecaps.model;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -26,9 +25,9 @@ public class ItemPrice implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 
-	private BigInteger price;
+	private Long price;
 
 	//bi-directional many-to-one association to ProductItem
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -46,11 +45,11 @@ public class ItemPrice implements Serializable {
 		this.id = id;
 	}
 
-	public BigInteger getPrice() {
+	public Long getPrice() {
 		return this.price;
 	}
 
-	public void setPrice(BigInteger price) {
+	public void setPrice(Long price) {
 		this.price = price;
 	}
 

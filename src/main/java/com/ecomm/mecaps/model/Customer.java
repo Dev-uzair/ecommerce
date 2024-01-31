@@ -1,7 +1,6 @@
 package com.ecomm.mecaps.model;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -25,10 +24,10 @@ public class Customer implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="customer_id")
-	private long customerId;
+	private Long customerId;
 
 	@Column(name="customer_type")
-	private BigInteger customerType;
+	private Long customerType;
 
 	private String email;
 
@@ -64,11 +63,11 @@ public class Customer implements Serializable {
 		this.customerId = customerId;
 	}
 
-	public BigInteger getCustomerType() {
+	public Long getCustomerType() {
 		return this.customerType;
 	}
 
-	public void setCustomerType(BigInteger customerType) {
+	public void setCustomerType(Long customerType) {
 		this.customerType = customerType;
 	}
 

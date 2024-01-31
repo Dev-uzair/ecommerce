@@ -1,7 +1,6 @@
 package com.ecomm.mecaps.model;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -27,19 +26,19 @@ public class CustomerDiscount implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 
 	@Column(name="reward_points")
-	private BigInteger rewardPoints;
+	private Long rewardPoints;
 
 	@Column(name="reward_type")
-	private BigInteger rewardType;
+	private Long rewardType;
 
 	@Column(name="valid_form")
-	private BigInteger validForm;
+	private Long validForm;
 
 	@Column(name="valid_till")
-	private BigInteger validTill;
+	private Long validTill;
 
 	//bi-directional many-to-one association to Customer
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -57,35 +56,35 @@ public class CustomerDiscount implements Serializable {
 		this.id = id;
 	}
 
-	public BigInteger getRewardPoints() {
+	public Long getRewardPoints() {
 		return this.rewardPoints;
 	}
 
-	public void setRewardPoints(BigInteger rewardPoints) {
+	public void setRewardPoints(Long rewardPoints) {
 		this.rewardPoints = rewardPoints;
 	}
 
-	public BigInteger getRewardType() {
+	public Long getRewardType() {
 		return this.rewardType;
 	}
 
-	public void setRewardType(BigInteger rewardType) {
+	public void setRewardType(Long rewardType) {
 		this.rewardType = rewardType;
 	}
 
-	public BigInteger getValidForm() {
+	public Long getValidForm() {
 		return this.validForm;
 	}
 
-	public void setValidForm(BigInteger validForm) {
+	public void setValidForm(Long validForm) {
 		this.validForm = validForm;
 	}
 
-	public BigInteger getValidTill() {
+	public Long getValidTill() {
 		return this.validTill;
 	}
 
-	public void setValidTill(BigInteger validTill) {
+	public void setValidTill(Long validTill) {
 		this.validTill = validTill;
 	}
 

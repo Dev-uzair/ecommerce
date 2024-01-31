@@ -30,7 +30,7 @@ public class VariationOption implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="VOID")
-	private long void_;
+	private Long void_;
 
 	private String value;
 

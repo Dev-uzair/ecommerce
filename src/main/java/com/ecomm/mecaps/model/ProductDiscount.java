@@ -29,7 +29,7 @@ public class ProductDiscount implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 
 	@Column(name="discount_code")
 	private String discountCode;
@@ -41,10 +41,10 @@ public class ProductDiscount implements Serializable {
 	private String discountUnit;
 
 	@Column(name="discount_value")
-	private double discountValue;
+	private Double discountValue;
 
 	@Column(name="maximum_discount_amount")
-	private double maximumDiscountAmount;
+	private Double maximumDiscountAmount;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name="valid_from")

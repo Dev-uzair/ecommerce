@@ -26,7 +26,7 @@ public class OrderStatus implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="order_status_id")
-	private long orderStatusId;
+	private Long orderStatusId;
 
 	private String status;
 

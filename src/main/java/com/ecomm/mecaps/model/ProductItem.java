@@ -1,7 +1,6 @@
 package com.ecomm.mecaps.model;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -31,7 +30,7 @@ public class ProductItem implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="item_id")
-	private long itemId;
+	private Long itemId;
 
 	private String description;
 
@@ -39,9 +38,9 @@ public class ProductItem implements Serializable {
 	private byte isActive;
 
 	@Column(name="reward_points")
-	private BigInteger rewardPoints;
+	private Long rewardPoints;
 
-	private BigInteger sku;
+	private Long sku;
 
 	private String slug;
 
@@ -102,19 +101,19 @@ public class ProductItem implements Serializable {
 		this.isActive = isActive;
 	}
 
-	public BigInteger getRewardPoints() {
+	public Long getRewardPoints() {
 		return this.rewardPoints;
 	}
 
-	public void setRewardPoints(BigInteger rewardPoints) {
+	public void setRewardPoints(Long rewardPoints) {
 		this.rewardPoints = rewardPoints;
 	}
 
-	public BigInteger getSku() {
+	public Long getSku() {
 		return this.sku;
 	}
 
-	public void setSku(BigInteger sku) {
+	public void setSku(Long sku) {
 		this.sku = sku;
 	}
 

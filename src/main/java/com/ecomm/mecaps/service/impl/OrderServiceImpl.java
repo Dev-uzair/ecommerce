@@ -6,13 +6,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 import com.ecomm.mecaps.dao.OrderRepository;
 import com.ecomm.mecaps.model.Order;
 import com.ecomm.mecaps.service.OrderService;
 
 import jakarta.transaction.Transactional;
-
+@Service
 public class OrderServiceImpl implements OrderService {
 	@Autowired
 	private OrderRepository orderRepository;

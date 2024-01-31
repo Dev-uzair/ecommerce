@@ -28,7 +28,7 @@ public class Variation implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="variation_id")
-	private long variationId;
+	private Long variationId;
 
 	private String name;
 

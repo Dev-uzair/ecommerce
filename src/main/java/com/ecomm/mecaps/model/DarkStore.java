@@ -1,7 +1,6 @@
 package com.ecomm.mecaps.model;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -27,19 +26,19 @@ public class DarkStore implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="store_id")
-	private long storeId;
+	private Long storeId;
 
 	@Column(name="city_id")
-	private BigInteger cityId;
+	private Long cityId;
 
-	private double latitude;
+	private Double latitude;
 
-	private double longitude;
+	private Double longitude;
 
 	@Column(name="store_name")
 	private String storeName;
 
-	private BigInteger vfid;
+	private Long vfid;
 
 	//bi-directional many-to-one association to ItemStock
 	@OneToMany(mappedBy="darkStore")
@@ -60,11 +59,11 @@ public class DarkStore implements Serializable {
 		this.storeId = storeId;
 	}
 
-	public BigInteger getCityId() {
+	public Long getCityId() {
 		return this.cityId;
 	}
 
-	public void setCityId(BigInteger cityId) {
+	public void setCityId(Long cityId) {
 		this.cityId = cityId;
 	}
 
@@ -92,11 +91,11 @@ public class DarkStore implements Serializable {
 		this.storeName = storeName;
 	}
 
-	public BigInteger getVfid() {
+	public Long getVfid() {
 		return this.vfid;
 	}
 
-	public void setVfid(BigInteger vfid) {
+	public void setVfid(Long vfid) {
 		this.vfid = vfid;
 	}
 

@@ -1,7 +1,6 @@
 package com.ecomm.mecaps.model;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -19,22 +18,22 @@ public class City implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id   // add id annotation cause project not working
 	@Column(name="city_id")
-	private BigInteger cityId;
+	private Long cityId;
 
 	@Column(name="city_name")
 	private String cityName;
 
 	@Column(name="country_id")
-	private BigInteger countryId;
+	private Long countryId;
 
 	public City() {
 	}
 
-	public BigInteger getCityId() {
+	public Long getCityId() {
 		return this.cityId;
 	}
 
-	public void setCityId(BigInteger cityId) {
+	public void setCityId(Long cityId) {
 		this.cityId = cityId;
 	}
 
@@ -46,11 +45,11 @@ public class City implements Serializable {
 		this.cityName = cityName;
 	}
 
-	public BigInteger getCountryId() {
+	public Long getCountryId() {
 		return this.countryId;
 	}
 
-	public void setCountryId(BigInteger countryId) {
+	public void setCountryId(Long countryId) {
 		this.countryId = countryId;
 	}
 

@@ -27,7 +27,7 @@ public class VfStore implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="vf_store_id")
-	private long vfStoreId;
+	private Long vfStoreId;
 
 	//bi-directional many-to-one association to DarkStore
 	@ManyToOne(fetch=FetchType.LAZY)

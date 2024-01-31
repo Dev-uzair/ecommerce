@@ -1,7 +1,6 @@
 package com.ecomm.mecaps.model;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -26,7 +25,7 @@ public class BillingAddress implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 
 	@Column(name="address_line1")
 	private String addressLine1;
@@ -35,16 +34,16 @@ public class BillingAddress implements Serializable {
 	private String addressType;
 
 	@Column(name="city_id")
-	private BigInteger cityId;
+	private Long cityId;
 
 	@Column(name="customer_id")
-	private BigInteger customerId;
+	private Long customerId;
 
 	@Column(name="flat_no")
-	private BigInteger flatNo;
+	private Long flatNo;
 
 	@Column(name="house_no")
-	private BigInteger houseNo;
+	private Long houseNo;
 
 	@Column(name="is_default")
 	private byte isDefault;
@@ -53,7 +52,7 @@ public class BillingAddress implements Serializable {
 
 	private double latitude;
 
-	private BigInteger longitude;
+	private Long longitude;
 
 	private String POC_email;
 
@@ -62,7 +61,7 @@ public class BillingAddress implements Serializable {
 	private String POC_phone_no;
 
 	@Column(name="postal_code")
-	private BigInteger postalCode;
+	private Long postalCode;
 
 	//bi-directional many-to-one association to Order
 	@OneToMany(mappedBy="billingAddress")
@@ -95,35 +94,35 @@ public class BillingAddress implements Serializable {
 		this.addressType = addressType;
 	}
 
-	public BigInteger getCityId() {
+	public Long getCityId() {
 		return this.cityId;
 	}
 
-	public void setCityId(BigInteger cityId) {
+	public void setCityId(Long cityId) {
 		this.cityId = cityId;
 	}
 
-	public BigInteger getCustomerId() {
+	public Long getCustomerId() {
 		return this.customerId;
 	}
 
-	public void setCustomerId(BigInteger customerId) {
+	public void setCustomerId(Long customerId) {
 		this.customerId = customerId;
 	}
 
-	public BigInteger getFlatNo() {
+	public Long getFlatNo() {
 		return this.flatNo;
 	}
 
-	public void setFlatNo(BigInteger flatNo) {
+	public void setFlatNo(Long flatNo) {
 		this.flatNo = flatNo;
 	}
 
-	public BigInteger getHouseNo() {
+	public Long getHouseNo() {
 		return this.houseNo;
 	}
 
-	public void setHouseNo(BigInteger houseNo) {
+	public void setHouseNo(Long houseNo) {
 		this.houseNo = houseNo;
 	}
 
@@ -151,11 +150,11 @@ public class BillingAddress implements Serializable {
 		this.latitude = latitude;
 	}
 
-	public BigInteger getLongitude() {
+	public Long getLongitude() {
 		return this.longitude;
 	}
 
-	public void setLongitude(BigInteger longitude) {
+	public void setLongitude(Long longitude) {
 		this.longitude = longitude;
 	}
 
@@ -183,11 +182,11 @@ public class BillingAddress implements Serializable {
 		this.POC_phone_no = POC_phone_no;
 	}
 
-	public BigInteger getPostalCode() {
+	public Long getPostalCode() {
 		return this.postalCode;
 	}
 
-	public void setPostalCode(BigInteger postalCode) {
+	public void setPostalCode(Long postalCode) {
 		this.postalCode = postalCode;
 	}
 

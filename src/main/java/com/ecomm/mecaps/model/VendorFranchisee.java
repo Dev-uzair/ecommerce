@@ -27,7 +27,7 @@ public class VendorFranchisee implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private long vfid;
+	private Long vfid;
 
 	//bi-directional many-to-one association to ProductItem
 	@OneToMany(mappedBy="vendorFranchisee")

@@ -1,7 +1,6 @@
 package com.ecomm.mecaps.model;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -28,10 +27,10 @@ public class Order implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="order_id")
-	private long orderId;
+	private Long orderId;
 
 	@Column(name="order_date")
-	private BigInteger orderDate;
+	private Long orderDate;
 
 	@Column(name="total_amount")
 	private double totalAmount;
@@ -89,11 +88,11 @@ public class Order implements Serializable {
 		this.orderId = orderId;
 	}
 
-	public BigInteger getOrderDate() {
+	public Long getOrderDate() {
 		return this.orderDate;
 	}
 
-	public void setOrderDate(BigInteger orderDate) {
+	public void setOrderDate(Long orderDate) {
 		this.orderDate = orderDate;
 	}
 
